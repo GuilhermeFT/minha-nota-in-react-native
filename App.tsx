@@ -1,31 +1,20 @@
-import {
-  useFonts,
-  Jost_500Medium,
-  Jost_600SemiBold
-} from '@expo-google-fonts/jost'
-import { Roboto_700Bold, Roboto_400Regular } from '@expo-google-fonts/roboto'
-import AppLoading from 'expo-app-loading'
-import { StatusBar } from 'expo-status-bar'
-import React from 'react'
-
-import MainRoutes from './src/routes'
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
-  const [fontsLoaded] = useFonts({
-    Roboto_700Bold,
-    Roboto_400Regular,
-    Jost_500Medium,
-    Jost_600SemiBold
-  })
-
-  if (!fontsLoaded) {
-    return (
-      <>
-        <StatusBar style="light" />
-        <AppLoading />
-      </>
-    )
-  }
-
-  return <MainRoutes />
+  return (
+    <View style={styles.container}>
+      <Text>Open up App.tsx to start working on your app!</Text>
+      <StatusBar style="auto" />
+    </View>
+  );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
