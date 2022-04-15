@@ -4,11 +4,13 @@ const theme = {
       primary: '#3A3A3A',
       secondary: '#424242',
       tertiary: '#3488E1',
-      quaternary: '#EF4B4B'
+      quaternary: '#EF4B4B',
+      quinary: '#8F8F8F'
     },
     background: {
       gray: '#F4F4F4',
-      white: '#FFFFFF'
+      white: '#FFFFFF',
+      lightGray: '#BFBFBF'
     }
   }
 }
