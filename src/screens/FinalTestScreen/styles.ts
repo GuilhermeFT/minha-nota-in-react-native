@@ -24,7 +24,9 @@ export const InputNote = styled.TextInput`
 `
 
 export const StatusText = styled.Text`
+  font-size: 14px;
   color: ${({ theme }) => theme.colors.text.quinary};
   text-align: right;
   padding: 16px;
+  font-family: 'Roboto_700Bold';
 `
