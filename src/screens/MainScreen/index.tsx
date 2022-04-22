@@ -13,9 +13,16 @@ const MainScreen = () => {
           variant="danger"
           onPress={() => push('Prova Final')}
         />
-        <CardButton label="4º Bimestre" />
+        <CardButton
+          label="4º Bimestre"
+          onPress={() => push('Último Bimestre')}
+        />
       </S.ColumnWrapper>
-      <CardButton width="full" label="Média Bimestral" />
+      <CardButton
+        width="full"
+        label="Média Bimestral"
+        onPress={() => push('Média Bimestral')}
+      />
     </S.Wrapper>
   )
 }

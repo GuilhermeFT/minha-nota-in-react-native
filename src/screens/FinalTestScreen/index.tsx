@@ -38,7 +38,7 @@ const FinalTestScreen = () => {
         }}
       />
 
-      <S.NoteView>{value.toFixed(1)}</S.NoteView>
+      <S.NoteView>{value.toFixed(2)}</S.NoteView>
       <S.StatusText>{status}</S.StatusText>
     </S.Wrapper>
   )
