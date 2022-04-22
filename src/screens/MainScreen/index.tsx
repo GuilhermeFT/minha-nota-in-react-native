@@ -1,14 +1,21 @@
 import * as S from './styles'
 import CardButton from '../../components/CardButton'
+import { useNavigation } from '@react-navigation/native'
+import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 
 const MainScreen = () => {
+  const { push } = useNavigation<NativeStackNavigationProp<any>>()
   return (
     <S.Wrapper>
       <S.ColumnWrapper>
-        <CardButton label="Prova Final" variant="danger" />
+        <CardButton
+          label="Prova Final"
+          variant="danger"
+          onPress={() => push('Prova Final')}
+        />
         <CardButton label="4º Bimestre" />
       </S.ColumnWrapper>
-      <CardButton width='full' label="Média Bimestral" />
+      <CardButton width="full" label="Média Bimestral" />
     </S.Wrapper>
   )
 }

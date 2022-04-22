@@ -1,10 +1,10 @@
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import MainScreen from '../screens/MainScreen'
 
-import * as NavigationBar from 'expo-navigation-bar'
-import theme from '../styles/theme'
 import { useTheme } from 'styled-components'
+import FinalTestScreen from '../screens/FinalTestScreen'
+import BackButton from '../components/BackButton'
+import MainScreen from '../screens/MainScreen'
 
 const Stack = createNativeStackNavigator()
 
@@ -21,6 +21,22 @@ function StackNavigation() {
             headerTitleStyle: {
               fontFamily: 'Roboto_400Regular',
               fontSize: 28
+            },
+            headerShadowVisible: false,
+            headerTintColor: colors.text.primary
+          }}
+        />
+
+        <Stack.Screen
+          name="Prova Final"
+          component={FinalTestScreen}
+          options={{
+            headerLeft: () => <BackButton />,
+            headerTitleAlign: 'center',
+            headerTitleStyle: {
+              fontFamily: 'Roboto_400Regular',
+              fontSize: 28,
+              color: colors.text.quaternary
             },
             headerShadowVisible: false,
             headerTintColor: colors.text.primary
