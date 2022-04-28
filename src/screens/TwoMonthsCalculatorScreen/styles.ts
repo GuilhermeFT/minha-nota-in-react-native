@@ -34,6 +34,7 @@ export const ListWrapper = styled.View`
 
 export const List = styled(SwipeListView)`
   width: 100%;
+  flex-grow: 0;
   max-height: 210px;
 `
 
@@ -74,6 +75,7 @@ export const TextInstructions = styled.Text`
 `
 
 export const ButtonWrapper = styled.View`
+  background-color: green;
   width: 100%;
   padding: 16px;
 `
@@ -93,7 +95,7 @@ export const ButtonText = styled.Text`
 
 export const DeleteButton = styled.View`
   background-color: ${({ theme }) => theme.colors.background.red};
-  padding: 8px;
+  padding: 16px;
   align-items: center;
   flex: 1;
   flex-direction: row;
@@ -104,7 +106,7 @@ export const DeleteButton = styled.View`
 export const DeleteButtonText = styled.Text`
   font-size: 16px;
   color: ${({ theme }) => theme.colors.text.white};
-  font-family: 'Roboto_700Bold';
+  font-family: 'Roboto_400Regular';
   text-align: right;
   width: 100%;
 `

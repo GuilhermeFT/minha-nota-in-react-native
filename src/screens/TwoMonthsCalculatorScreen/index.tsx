@@ -11,11 +11,13 @@ const TwoMonthsCalculatorScreen = () => {
 
   const [notes, setNotes] = useState([
     {
-      note: '10',
+      id: 1,
+      note: '',
       weight: '10'
     },
     {
-      note: '10',
+      id: 2,
+      note: '',
       weight: '10'
     }
   ])
@@ -39,9 +41,8 @@ const TwoMonthsCalculatorScreen = () => {
       <S.ListWrapper>
         <S.List
           data={notes}
-          keyExtractor={(_, index) => index.toString()}
           renderItem={({ item, index }) => {
-            const { note, weight } = item as typeof notes[0]
+            const { id, note, weight } = item as typeof notes[0]
             const newNotes = [...notes]
 
             return (
@@ -51,11 +52,12 @@ const TwoMonthsCalculatorScreen = () => {
                 rightOpenValue={-Dimensions.get('window').width}
                 onSwipeValueChange={(data) => {
                   const { value } = data
+
                   if (
                     value < -Dimensions.get('window').width &&
                     notes.length > 1
                   ) {
-                    const newNotes = notes.filter((_note, i) => i !== index)
+                    const newNotes = notes.filter((note) => note.id !== id)
 
                     setNotes(newNotes)
                   }
@@ -117,7 +119,14 @@ const TwoMonthsCalculatorScreen = () => {
         <S.AddButton
           activeOpacity={0.9}
           onPress={() => {
-            setNotes([...notes, { note: '', weight: '' }])
+            setNotes([
+              ...notes,
+              {
+                id: notes[notes.length - 1].id + 1,
+                note: '',
+                weight: ''
+              }
+            ])
           }}
         >
           <S.ButtonText>Adicionar avaliação</S.ButtonText>
