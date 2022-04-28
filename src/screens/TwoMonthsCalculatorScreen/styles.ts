@@ -75,7 +75,6 @@ export const TextInstructions = styled.Text`
 `
 
 export const ButtonWrapper = styled.View`
-  background-color: green;
   width: 100%;
   padding: 16px;
 `

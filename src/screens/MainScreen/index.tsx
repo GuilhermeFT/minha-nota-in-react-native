@@ -2,6 +2,7 @@ import * as S from './styles'
 import CardButton from '../../components/CardButton'
 import { useNavigation } from '@react-navigation/native'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
+import * as Linking from 'expo-linking'
 
 const MainScreen = () => {
   const { push } = useNavigation<NativeStackNavigationProp<any>>()
@@ -23,6 +24,16 @@ const MainScreen = () => {
         label="Média Bimestral"
         onPress={() => push('Média Bimestral')}
       />
+
+      <S.TextLink
+        onPress={() => {
+          Linking.openURL(
+            'https://guilhermeft.wixsite.com/minhanota/politica-de-privacidade'
+          )
+        }}
+      >
+        Política de Privacidade
+      </S.TextLink>
     </S.Wrapper>
   )
 }

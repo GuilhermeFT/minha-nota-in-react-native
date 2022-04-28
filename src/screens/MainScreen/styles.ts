@@ -13,3 +13,10 @@ export const ColumnWrapper = styled.View`
   justify-content: space-between;
   margin-bottom: 12px;
 `
+
+export const TextLink = styled.Text`
+  margin-top: 34px;
+  color: ${({ theme }) => theme.colors.text.tertiary};
+  font-size: 14px;
+  text-decoration: underline;
+`
